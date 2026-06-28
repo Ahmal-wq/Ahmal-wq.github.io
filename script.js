@@ -2,10 +2,10 @@
 
 // ---------- Demo Routes ----------
 const previews = {
-  "KERRY25": "demos/kerrykay/",
-  "SSAUTO11": "demos/ss-auto/",
-  "INSKIN08": "demos/in-skin/",
-  "KEVITAAH13": "demos/kevitaah/"
+  "KERRY25": "Demos/kerrykay/",
+  "SSAUTO11": "Demos/ss-auto/",
+  "INSKIN08": "Demos/in-skin/",
+  "KEVITAAH13": "Demos/kevitaah/"
 };
 
 // ---------- DOM Elements ----------
