@@ -1,1 +1,353 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S&S Auto Repair Jamaica | Professional Vehicle Services in Spanish Town</title>
+  <meta name="description" content="S&S Auto Repair delivers honest, professional auto repairs in Spanish Town, Jamaica. From diagnostics to transmission service, trust our experienced technicians to keep you on the road.">
+  <!-- Placeholder: Replace with real business keywords -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Skip to content for accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Sticky Header -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="S&S Auto Repair Home">
+        <span class="logo-icon" aria-hidden="true">🔧</span>
+        <span class="logo-text">S&S Auto Repair</span>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle menu">
+          <span class="hamburger"></span>
+        </button>
+        <ul class="nav-list" id="navMenu">
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#why-us" class="nav-link">Why Us</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-overlay"></div>
+      <!-- Cinematic background image (placeholder – replace with real photo) -->
+      <img 
+        src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=1200&q=80" 
+        alt="Mechanics working on modern vehicles" 
+        class="hero-bg"
+        loading="eager"
+      >
+      <div class="container hero-content">
+        <h1 id="hero-heading" class="hero-title">Professional Auto Repairs<br>You Can Trust</h1>
+        <p class="hero-subtitle">
+          From routine maintenance to complex diagnostics, S&S Auto Repair keeps drivers across Spanish Town safely on the road with reliable workmanship and honest service.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Request a Quote</a>
+          <a href="tel:+18761234567" class="btn btn-secondary">Call Now</a>
+        </div>
+        <div class="trust-badges" aria-label="Trust indicators">
+          <span class="badge">✔ Experienced Technicians</span>
+          <span class="badge">✔ Honest Service</span>
+          <span class="badge">✔ Quality Repairs</span>
+          <span class="badge">✔ Fast Turnaround</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services section" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <h2 id="services-heading" class="section-title">Our Services</h2>
+        <div class="services-grid">
+          <!-- Service cards – icons are placeholder SVGs -->
+          <article class="service-card fade-up">
+            <div class="service-icon" aria-hidden="true"><svg>...</svg></div>
+            <h3>Engine Diagnostics</h3>
+            <p>Advanced computer diagnostics to pinpoint issues quickly and accurately.</p>
+            <a href="#contact" class="btn btn-small">Learn More</a>
+          </article>
+          <article class="service-card fade-up">
+            <div class="service-icon" aria-hidden="true"><svg>...</svg></div>
+            <h3>Brake Repairs</h3>
+            <p>Complete brake inspections, pad replacements, and rotor resurfacing.</p>
+            <a href="#contact" class="btn btn-small">Learn More</a>
+          </article>
+          <article class="service-card fade-up">
+            <div class="service-icon" aria-hidden="true"><svg>...</svg></div>
+            <h3>Suspension</h3>
+            <p>Shocks, struts, and alignment — smooth handling restored.</p>
+            <a href="#contact" class="btn btn-small">Learn More</a>
+          </article>
+          <article class="service-card fade-up">
+            <div class="service-icon" aria-hidden="true"><svg>...</svg></div>
+            <h3>Oil Changes</h3>
+            <p>Full synthetic and conventional oil changes with filter replacement.</p>
+            <a href="#contact" class="btn btn-small">Learn More</a>
+          </article>
+          <article class="service-card fade-up">
+            <div class="service-icon" aria-hidden="true"><svg>...</svg></div>
+            <h3>Transmission Service</h3>
+            <p>Fluid flushes, filter changes, and complex transmission repairs.</p>
+            <a href="#contact" class="btn btn-small">Learn More</a>
+          </article>
+          <article class="service-card fade-up">
+            <div class="service-icon" aria-hidden="true"><svg>...</svg></div>
+            <h3>Air Conditioning</h3>
+            <p>AC performance checks, recharges, and compressor repairs.</p>
+            <a href="#contact" class="btn btn-small">Learn More</a>
+          </article>
+          <article class="service-card fade-up">
+            <div class="service-icon" aria-hidden="true"><svg>...</svg></div>
+            <h3>Battery Replacement</h3>
+            <p>Testing and replacement of all battery types — with warranty.</p>
+            <a href="#contact" class="btn btn-small">Learn More</a>
+          </article>
+          <article class="service-card fade-up">
+            <div class="service-icon" aria-hidden="true"><svg>...</svg></div>
+            <h3>Electrical Repairs</h3>
+            <p>Wiring, alternators, starters — our experts trace and fix the issue.</p>
+            <a href="#contact" class="btn btn-small">Learn More</a>
+          </article>
+          <article class="service-card fade-up">
+            <div class="service-icon" aria-hidden="true"><svg>...</svg></div>
+            <h3>General Maintenance</h3>
+            <p>Scheduled servicing to keep your vehicle running at its best.</p>
+            <a href="#contact" class="btn btn-small">Learn More</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose S&S Section -->
+    <section class="why-us section" id="why-us" aria-labelledby="why-heading">
+      <div class="container">
+        <h2 id="why-heading" class="section-title">Why Choose S&S Auto Repair</h2>
+        <div class="features-grid">
+          <div class="feature-card fade-up">
+            <div class="feature-icon">🔧</div>
+            <h3>Experienced Mechanics</h3>
+            <p>Skilled team with years of hands‑on expertise across all vehicle makes.</p>
+          </div>
+          <div class="feature-card fade-up">
+            <div class="feature-icon">💰</div>
+            <h3>Transparent Pricing</h3>
+            <p>Clear, upfront quotes — no hidden fees or unexpected surprises.</p>
+          </div>
+          <div class="feature-card fade-up">
+            <div class="feature-icon">⭐</div>
+            <h3>Quality Parts</h3>
+            <p>We use only reputable, high‑grade parts for lasting repairs.</p>
+          </div>
+          <div class="feature-card fade-up">
+            <div class="feature-icon">🤝</div>
+            <h3>Customer‑First Service</h3>
+            <p>Your satisfaction and safety come before anything else.</p>
+          </div>
+          <div class="feature-card fade-up">
+            <div class="feature-icon">⏱️</div>
+            <h3>Reliable Turnaround</h3>
+            <p>We respect your time — most jobs completed faster than you expect.</p>
+          </div>
+          <div class="feature-card fade-up">
+            <div class="feature-icon">🔍</div>
+            <h3>Attention to Detail</h3>
+            <p>Every bolt, every fluid — we don’t cut corners.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works section" aria-labelledby="how-heading">
+      <div class="container">
+        <h2 id="how-heading" class="section-title">How It Works</h2>
+        <div class="steps">
+          <div class="step fade-up">
+            <div class="step-number">1</div>
+            <h3>Request a Quote</h3>
+            <p>Tell us what’s going on — call or fill the form. We’ll give you a clear estimate.</p>
+          </div>
+          <div class="step fade-up">
+            <div class="step-number">2</div>
+            <h3>Vehicle Inspection</h3>
+            <p>Bring your car in for a thorough check‑up to confirm the work needed.</p>
+          </div>
+          <div class="step fade-up">
+            <div class="step-number">3</div>
+            <h3>Repair & Approval</h3>
+            <p>We only start after you approve the plan and cost. No surprises.</p>
+          </div>
+          <div class="step fade-up">
+            <div class="step-number">4</div>
+            <h3>Drive Away with Confidence</h3>
+            <p>Your vehicle leaves our shop safe, smooth, and road‑ready.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials section" aria-labelledby="testimonials-heading">
+      <div class="container">
+        <h2 id="testimonials-heading" class="section-title">What Our Customers Say</h2>
+        <div class="testimonials-grid">
+          <!-- Repeat 3‑6 testimonial cards with star ratings -->
+          <blockquote class="testimonial-card fade-up">
+            <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+            <p>“Honest mechanics who don’t try to upsell. My Toyota feels brand new.”</p>
+            <footer>
+              <img src="https://i.pravatar.cc/80?img=11" alt="Customer photo" class="testimonial-avatar" loading="lazy">
+              <cite>— David C.</cite>
+            </footer>
+          </blockquote>
+          <!-- Add 2‑3 more cards similarly -->
+        </div>
+        <div class="center-btn">
+          <a href="#" class="btn btn-outline">See More Reviews</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Before & After Gallery -->
+    <section class="gallery section" id="gallery" aria-labelledby="gallery-heading">
+      <div class="container">
+        <h2 id="gallery-heading" class="section-title">Before & After</h2>
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- Images as placeholders -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Emergency Assistance Banner -->
+    <section class="emergency" aria-labelledby="emergency-heading">
+      <div class="container emergency-content">
+        <h2 id="emergency-heading">Need Repairs Fast?</h2>
+        <p>We’re here for you — same‑day service often available.</p>
+        <div class="emergency-actions">
+          <a href="tel:+18761234567" class="btn btn-call">📞 Call Now</a>
+          <a href="https://wa.me/18761234567" class="btn btn-whatsapp" target="_blank" rel="noopener">💬 WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq section" aria-labelledby="faq-heading">
+      <div class="container">
+        <h2 id="faq-heading" class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item fade-up">
+            <summary>Do I need an appointment?</summary>
+            <p>While walk‑ins are welcome, appointments help us serve you faster and avoid wait times.</p>
+          </details>
+          <details class="faq-item fade-up">
+            <summary>How long will repairs take?</summary>
+            <p>Most routine services are completed the same day. Major repairs receive a clear time estimate upfront.</p>
+          </details>
+          <details class="faq-item fade-up">
+            <summary>Do you inspect vehicles before repairs?</summary>
+            <p>Absolutely — a thorough inspection is part of our process to ensure no hidden issues remain.</p>
+          </details>
+          <details class="faq-item fade-up">
+            <summary>What payment methods do you accept?</summary>
+            <p>We accept cash, bank transfers, and all major credit/debit cards.</p>
+          </details>
+          <details class="faq-item fade-up">
+            <summary>Do you work on all makes and models?</summary>
+            <p>Yes — our team is trained on domestic, Asian, and European vehicles.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 id="contact-heading" class="section-title">Get in Touch</h2>
+        <div class="contact-grid">
+          <div class="contact-map">
+            <!-- Google Maps placeholder – replace with actual embed -->
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.127758131444!2d-76.9569!3d18.0029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDAwJzEwLjQiTiA3NsKwNTcnMjQuOCJX!5e0!3m2!1sen!2sus!4v1690000000000" 
+              width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" 
+              title="S&S Auto Repair location in Spanish Town"
+              aria-label="Map showing our workshop location"
+            ></iframe>
+            <p class="map-note">📍 14 Main Street, Spanish Town, Jamaica <br><small>(Placeholder – update with exact address)</small></p>
+          </div>
+          <div class="contact-details">
+            <div class="contact-info-item">
+              <strong>Opening Hours</strong>
+              <p>Mon–Fri: 8:00 AM – 6:00 PM<br>Sat: 8:00 AM – 3:00 PM<br>Sun: Closed</p>
+            </div>
+            <div class="contact-info-item">
+              <strong>Phone</strong>
+              <a href="tel:+18761234567">+1 (876) 123-4567</a>
+            </div>
+            <div class="contact-info-item">
+              <strong>WhatsApp</strong>
+              <a href="https://wa.me/18761234567" target="_blank" rel="noopener">Chat with us</a>
+            </div>
+            <div class="contact-info-item">
+              <strong>Email</strong>
+              <a href="mailto:info@ssautorepair.com">info@ssautorepair.com</a> <small>(placeholder)</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h3>S&S Auto Repair</h3>
+        <p>Spanish Town’s trusted auto care since 2012 (placeholder).</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#why-us">Why Us</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="TikTok">TT</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 S&S Auto Repair Jamaica. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Mobile Sticky Buttons -->
+  <div class="mobile-cta" aria-hidden="true">
+    <a href="tel:+18761234567" class="mobile-call-btn">📞 Call</a>
+    <a href="https://wa.me/18761234567" class="mobile-whatsapp-btn" target="_blank" rel="noopener">💬 WhatsApp</a>
+  </div>
+
+  <!-- Lightbox container (hidden) -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+    <img src="" alt="" id="lightboxImg">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
