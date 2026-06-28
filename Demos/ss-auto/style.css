@@ -1,0 +1,143 @@
+/* style.css – Premium Automotive Service Concept */
+
+:root {
+  --color-charcoal: #121212;
+  --color-white: #ffffff;
+  --color-accent: #0EA5E9;
+  --color-accent-hover: #0284c7;
+  --color-red: #DC2626;
+  --color-text: #1a1a1a;
+  --color-text-light: #555;
+  --shadow-sm: 0 4px 12px rgba(0,0,0,0.04);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.06);
+  --shadow-lg: 0 16px 40px rgba(0,0,0,0.08);
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, sans-serif;
+  --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background: var(--color-white);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+.skip-link { position: absolute; top: -100%; }
+.container { max-width: 1200px; margin: auto; padding: 0 1.5rem; }
+
+/* Header */
+.header {
+  background: var(--color-charcoal);
+  color: var(--color-white);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 1rem 0;
+}
+.header-inner { display: flex; justify-content: space-between; align-items: center; }
+.logo { display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: white; font-weight: 700; font-size: 1.3rem; }
+.nav-list { display: flex; gap: 1.5rem; list-style: none; }
+.nav-link { color: white; text-decoration: none; font-weight: 500; transition: color var(--transition); }
+.nav-link:hover { color: var(--color-accent); }
+
+/* Hamburger */
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; }
+.hamburger { width: 24px; height: 2px; background: white; display: block; position: relative; }
+.hamburger::before, .hamburger::after { content: ''; width: 24px; height: 2px; background: white; position: absolute; left: 0; transition: 0.2s; }
+.hamburger::before { top: -8px; }
+.hamburger::after { top: 8px; }
+
+/* Hero */
+.hero { position: relative; min-height: 90vh; display: flex; align-items: center; color: white; overflow: hidden; }
+.hero-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(18,18,18,0.85) 0%, rgba(18,18,18,0.4) 100%); z-index: 1; }
+.hero-content { position: relative; z-index: 2; text-align: left; max-width: 700px; }
+.hero-title { font-size: clamp(2.5rem, 7vw, 4.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; }
+.hero-subtitle { font-size: 1.2rem; margin-bottom: 2rem; color: rgba(255,255,255,0.85); }
+.hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem; }
+.btn { display: inline-block; padding: 0.9rem 2rem; border-radius: 50px; font-weight: 600; text-decoration: none; transition: all var(--transition); }
+.btn-primary { background: var(--color-accent); color: white; box-shadow: 0 6px 18px rgba(14,165,233,0.3); }
+.btn-primary:hover { background: var(--color-accent-hover); transform: translateY(-2px); box-shadow: 0 10px 24px rgba(14,165,233,0.4); }
+.btn-secondary { background: transparent; border: 2px solid white; color: white; }
+.btn-secondary:hover { background: white; color: var(--color-charcoal); }
+.trust-badges { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+.badge { font-weight: 500; font-size: 0.9rem; color: #e0e0e0; }
+
+/* Sections */
+.section { padding: 5rem 0; }
+.section-title { text-align: center; font-size: 2.5rem; font-weight: 800; margin-bottom: 3rem; color: var(--color-charcoal); }
+
+/* Services grid */
+.services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; }
+.service-card { background: white; border-radius: var(--radius-md); padding: 2rem; box-shadow: var(--shadow-md); transition: transform var(--transition), box-shadow var(--transition); }
+.service-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+.service-icon svg { width: 40px; height: 40px; color: var(--color-accent); }
+.btn-small { padding: 0.5rem 1.2rem; font-size: 0.9rem; background: var(--color-charcoal); color: white; border-radius: 50px; display: inline-block; text-decoration: none; }
+
+/* Why Us */
+.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+.feature-card { text-align: center; padding: 2rem; }
+.feature-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+
+/* How it works */
+.steps { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 2rem; }
+.step { flex: 1 1 200px; text-align: center; padding: 2rem; border-radius: var(--radius-md); background: #f8f8f8; position: relative; }
+.step-number { width: 40px; height: 40px; background: var(--color-accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; font-weight: bold; }
+
+/* Testimonials */
+.testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.testimonial-card { background: white; padding: 2rem; border-radius: var(--radius-md); box-shadow: var(--shadow-sm); }
+.stars { color: #fbbf24; font-size: 1.2rem; }
+.center-btn { text-align: center; margin-top: 2rem; }
+.btn-outline { border: 2px solid var(--color-charcoal); color: var(--color-charcoal); background: transparent; }
+
+/* Gallery */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; }
+.gallery-grid img { width: 100%; border-radius: var(--radius-sm); cursor: pointer; transition: transform var(--transition); }
+.gallery-grid img:hover { transform: scale(1.02); }
+
+/* Emergency Banner */
+.emergency { background: linear-gradient(135deg, #DC2626, #b91c1c); color: white; text-align: center; padding: 4rem 1rem; }
+.emergency-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1.5rem; }
+.btn-call, .btn-whatsapp { background: white; color: #DC2626; font-weight: 700; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; }
+.btn-whatsapp { background: #25D366; color: white; }
+
+/* FAQ */
+.faq-item { background: white; border-radius: var(--radius-sm); padding: 1rem 1.5rem; margin-bottom: 1rem; box-shadow: var(--shadow-sm); }
+.faq-item summary { font-weight: 600; cursor: pointer; list-style: none; }
+.faq-item[open] summary { margin-bottom: 0.5rem; }
+
+/* Contact */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+.contact-details { display: flex; flex-direction: column; gap: 1.5rem; }
+.contact-info-item strong { display: block; color: var(--color-charcoal); }
+
+/* Footer */
+.footer { background: var(--color-charcoal); color: white; padding: 3rem 0 1.5rem; }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; }
+.footer-bottom { text-align: center; margin-top: 2rem; opacity: 0.8; }
+
+/* Mobile sticky */
+.mobile-cta { display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: white; box-shadow: 0 -4px 12px rgba(0,0,0,0.1); z-index: 99; }
+@media (max-width: 768px) {
+  .nav-list { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: var(--color-charcoal); }
+  .nav-list.active { display: flex; }
+  .nav-toggle { display: block; }
+  .mobile-cta { display: flex; }
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
+/* Animations */
+.fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+
+/* Lightbox */
+.lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); justify-content: center; align-items: center; z-index: 1000; }
+.lightbox.active { display: flex; }
+.lightbox img { max-width: 90%; max-height: 90%; border-radius: 10px; }
+.lightbox-close { position: absolute; top: 20px; right: 30px; color: white; font-size: 2rem; background: none; border: none; cursor: pointer; }
