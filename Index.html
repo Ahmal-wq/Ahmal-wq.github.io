@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Custom Website Preview | Ahmal Thomas — Web Designer</title>
+  <meta name="description" content="Access your personalized website concept preview. Enter your unique code to view a custom-designed demo tailored for your business." />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:title" content="Your Custom Website Preview" />
+  <meta property="og:description" content="Enter your preview code to see a personalized website concept built for your business." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Structured Data: Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alex Morgan",
+    "jobTitle": "Web Designer",
+    "url": "https://alexmorgan.design",
+    "sameAs": [
+      "https://github.com/alexmorgan",
+      "https://linkedin.com/in/alexmorgan"
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Minimal top bar with brand -->
+  <header class="top-bar glass">
+    <div class="top-bar-inner container">
+      <a href="/" class="logo" aria-label="Alex Morgan Home">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="url(#logo-grad)" />
+          <path d="M9 16L14 21L23 11" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+          <defs>
+            <linearGradient id="logo-grad" x1="0" y1="0" x2="32" y2="32">
+              <stop stop-color="#0071E3" />
+              <stop offset="1" stop-color="#5B8DEF" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <span class="logo-text">Alex Morgan</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container hero-content">
+        <h1 id="hero-heading" class="hero-title">Your Custom Website Preview</h1>
+        <p class="hero-subtitle">
+          If you've received a proposal from me, enter your preview code below to access the
+          custom website concept created specifically for your business.
+        </p>
+
+        <div class="preview-card glass" id="previewCard">
+          <form id="previewForm" novalidate>
+            <label for="codeInput" class="sr-only">Preview Code</label>
+            <input
+              type="text"
+              id="codeInput"
+              class="code-input"
+              placeholder="e.g. KERRY25"
+              autocomplete="off"
+              spellcheck="false"
+              aria-describedby="errorMessage"
+            />
+            <button type="submit" class="btn-primary" id="submitBtn">
+              View My Preview
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div id="errorMessage" class="error-message" role="alert" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section" aria-labelledby="about-heading">
+      <div class="container">
+        <h2 id="about-heading" class="section-title">About These Previews</h2>
+        <div class="about-text">
+          <p>
+            Every concept you see here is the result of careful research into your business,
+            audience, and goals. I build these hand‑crafted previews to demonstrate how a
+            modern, strategically designed website can elevate your online presence — before
+            you commit to anything.
+          </p>
+          <p>
+            No templates, no generic layouts. Just a personalised vision of what’s possible
+            when design is driven by purpose.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why I Build These (Feature Cards) -->
+    <section class="features section" aria-labelledby="features-heading">
+      <div class="container">
+        <h2 id="features-heading" class="section-title">Why I Build These</h2>
+        <div class="features-grid">
+          <!-- Card 1 -->
+          <article class="feature-card glass">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" />
+                <path d="M20 30L14 20H26L20 30Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                <path d="M6 20H34" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <circle cx="20" cy="12" r="2" fill="currentColor" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Personalised Design</h3>
+            <p class="feature-desc">Every concept is tailored specifically for your business — your brand, your audience, your story.</p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="feature-card glass">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M20 4L22 16L34 18L22 20L20 32L18 20L6 18L18 16L20 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Modern User Experience</h3>
+            <p class="feature-desc">Fast, responsive, and designed to convert visitors into customers — with a premium feel that builds trust.</p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="feature-card glass">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M20 36C28.8366 36 36 28.8366 36 20C36 11.1634 28.8366 4 20 4C11.1634 4 4 11.1634 4 20C4 28.8366 11.1634 36 20 36Z" stroke="currentColor" stroke-width="2" />
+                <path d="M13 20L18 25L27 15" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3 class="feature-title">No Obligation</h3>
+            <p class="feature-desc">These previews are simply to showcase what’s possible — no strings attached, no pressure.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 id="contact-heading" class="section-title">Get in Touch</h2>
+        <p class="contact-sub">Ready to move forward or have a question? Reach out anytime.</p>
+        <div class="contact-links">
+          <a href="mailto:alex@morgan.design" class="contact-item" aria-label="Email Alex">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2" />
+              <path d="M2 7L12 14L22 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>alex@morgan.design</span>
+          </a>
+          <a href="https://wa.me/15551234567" class="contact-item" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M3 21L4.65 17.5C3.36 15.95 2.5 13.97 2.5 11.8C2.5 6.31 6.81 2 12.3 2C17.79 2 22.1 6.31 22.1 11.8C22.1 17.29 17.79 21.6 12.3 21.6C10.34 21.6 8.48 20.95 7 19.85L3 21Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+              <path d="M9 10H9.01M12 10H12.01M15 10H15.01M9 14H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>WhatsApp</span>
+          </a>
+          <a href="https://github.com/alexmorgan" class="contact-item" target="_blank" rel="noopener" aria-label="GitHub Profile">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 19C4 20.5 4 16.5 2 16M16 22V18.13C16.0375 16.88 15.5731 15.655 14.7 14.75C17.8 14.35 21 13.25 21 8.25C20.9992 6.855 20.4418 5.525 19.45 4.55C19.8918 3.35 19.8918 2.02 19.45 0.82C19.45 0.82 18.35 0.48 15.9 2.03C13.745 1.35 11.255 1.35 9.1 2.03C6.65 0.48 5.55 0.82 5.55 0.82C5.10824 2.02 5.10824 3.35 5.55 4.55C4.55818 5.525 4.00076 6.855 4 8.25C4 13.25 7.2 14.35 10.3 14.75C9.42688 15.655 8.96248 16.88 9 18.13V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>GitHub</span>
+          </a>
+          <a href="https://linkedin.com/in/alexmorgan" class="contact-item" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="2" />
+              <path d="M8 11V17M8 8V8.01M12 17V11M16 17V13.5C16 11.57 14.43 10 12.5 10V10C11.57 10 10.8 10.73 10.8 11.6V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2025 Alex Morgan. Crafted with care.</p>
+      <p class="footer-tagline">Turning first impressions into lasting relationships.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
