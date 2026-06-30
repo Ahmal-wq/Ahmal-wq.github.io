@@ -6,13 +6,11 @@
   <title>Custom Website Preview | Ahmal Thomas — Web Designer</title>
   <meta name="description" content="Access your personalized website concept preview. Enter your unique code to view a custom-designed demo tailored for your business." />
 
-  <!-- Open Graph / Social -->
   <meta property="og:title" content="Your Custom Website Preview" />
   <meta property="og:description" content="Enter your preview code to see a personalized website concept built for your business." />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Structured Data: Person -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -27,13 +25,369 @@
   }
   </script>
 
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Global Variables & Resets */
+    :root {
+      --bg-dark: #0b0f19;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --primary: #0071E3;
+      --primary-hover: #1d83ec;
+      --error: #ef4444;
+      --glass-bg: rgba(255, 255, 255, 0.03);
+      --glass-border: rgba(255, 255, 255, 0.08);
+      --glass-glow: rgba(0, 113, 227, 0.15);
+      --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-stack);
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Ambient Background Glows */
+    body::before, body::after {
+      content: "";
+      position: absolute;
+      width: 40vw;
+      height: 40vw;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0, 113, 227, 0.15) 0%, rgba(0,0,0,0) 70%);
+      z-index: -1;
+      pointer-events: none;
+    }
+    body::before { top: -10vw; right: -10vw; }
+    body::after { top: 40vw; left: -15vw; }
+
+    /* Utility Layout Components */
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .glass {
+      background: var(--glass-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--glass-border);
+      border-radius: 16px;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
+    /* Header Navigation */
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      border-radius: 0;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+
+    .top-bar-inner {
+      height: 70px;
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 600;
+      font-size: 1.15rem;
+      letter-spacing: -0.02em;
+    }
+
+    /* Hero / Gateway Section */
+    .hero {
+      padding: 10rem 0 5rem 0;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 700px;
+    }
+
+    .hero-title {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(135deg, #ffffff 40%, #a5c7f7 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1.1rem, 2vw, 1.25rem);
+      color: var(--text-muted);
+      margin-bottom: 3rem;
+    }
+
+    /* Dynamic Preview Form Card */
+    .preview-card {
+      padding: 2.5rem;
+      max-width: 550px;
+      margin: 0 auto;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255,255,255,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .preview-card:focus-within {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 30px var(--glass-glow);
+    }
+
+    #previewForm {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .code-input {
+      width: 100%;
+      padding: 1.1rem 1.5rem;
+      background: rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--glass-border);
+      border-radius: 10px;
+      color: var(--text-main);
+      font-size: 1.1rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      text-align: center;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .code-input:focus {
+      border-color: var(--primary);
+      background: rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 0 4px rgba(0, 113, 223, 0.2);
+    }
+
+    .btn-primary {
+      width: 100%;
+      padding: 1.1rem 1.5rem;
+      background: var(--primary);
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-primary:active {
+      transform: translateY(1px);
+    }
+
+    .btn-primary svg {
+      transition: transform 0.2s ease;
+    }
+
+    .btn-primary:hover svg {
+      transform: translateX(4px);
+    }
+
+    .error-message {
+      color: var(--error);
+      font-size: 0.95rem;
+      font-weight: 500;
+      min-height: 1.5rem;
+      margin-top: 0.25rem;
+    }
+
+    /* Content Generic Sections */
+    .section {
+      padding: 6rem 0;
+    }
+
+    .section-title {
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    /* About Section Specifics */
+    .about-text {
+      max-width: 750px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    /* Features Component Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .feature-card {
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .feature-icon {
+      color: var(--primary);
+      background: rgba(0, 113, 227, 0.1);
+      width: 60px;
+      height: 60px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .feature-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    .feature-desc {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    /* Interactive Connect Section */
+    .contact {
+      text-align: center;
+    }
+
+    .contact-sub {
+      color: var(--text-muted);
+      font-size: 1.15rem;
+      margin-top: -2rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 1.75rem;
+      border-radius: 30px;
+      background: var(--glass-bg);
+      border: 1px solid var(--glass-border);
+      color: var(--text-main);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .contact-item:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+      color: #fff;
+    }
+
+    .contact-item svg {
+      color: var(--text-muted);
+      transition: color 0.2s ease;
+    }
+
+    .contact-item:hover svg {
+      color: var(--primary);
+    }
+
+    /* Structured Semantic Footer */
+    .footer {
+      border-top: 1px solid var(--glass-border);
+      padding: 3rem 0;
+      margin-top: 4rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      text-align: center;
+    }
+
+    .footer-tagline {
+      font-style: italic;
+      opacity: 0.7;
+    }
+
+    /* Responsive Media Adaptation */
+    @media (max-width: 768px) {
+      .container { padding: 0 1.5rem; }
+      .hero { padding: 8rem 0 4rem 0; }
+      .preview-card { padding: 1.75rem; }
+      .section { padding: 4rem 0; }
+    }
+  </style>
 </head>
 <body>
-  <!-- Minimal top bar with brand -->
+
   <header class="top-bar glass">
     <div class="top-bar-inner container">
-      <a href="/" class="logo" aria-label="Alex Morgan Home">
+      <a href="/" class="logo" aria-label="Ahmal Thomas Home">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
           <rect width="32" height="32" rx="8" fill="url(#logo-grad)" />
           <path d="M9 16L14 21L23 11" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -50,7 +404,6 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
     <section class="hero" aria-labelledby="hero-heading">
       <div class="container hero-content">
         <h1 id="hero-heading" class="hero-title">Your Custom Website Preview</h1>
@@ -83,7 +436,6 @@
       </div>
     </section>
 
-    <!-- About Section -->
     <section class="about section" aria-labelledby="about-heading">
       <div class="container">
         <h2 id="about-heading" class="section-title">About These Previews</h2>
@@ -100,6 +452,162 @@
           </p>
         </div>
       </div>
+    </section>
+
+    <section class="features section" aria-labelledby="features-heading">
+      <div class="container">
+        <h2 id="features-heading" class="section-title">Why I Build These</h2>
+        <div class="features-grid">
+          <article class="feature-card glass">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" />
+                <path d="M20 30L14 20H26L20 30Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                <path d="M6 20H34" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                <circle cx="20" cy="12" r="2" fill="currentColor" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Personalised Design</h3>
+            <p class="feature-desc">Every concept is tailored specifically for your business — your brand, your audience, your story.</p>
+          </article>
+
+          <article class="feature-card glass">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M20 4L22 16L34 18L22 20L20 32L18 20L6 18L18 16L20 4Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3 class="feature-title">Modern User Experience</h3>
+            <p class="feature-desc">Fast, responsive, and designed to convert visitors into customers — with a premium feel that builds trust.</p>
+          </article>
+
+          <article class="feature-card glass">
+            <div class="feature-icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                <path d="M20 36C28.8366 36 36 28.8366 36 20C36 11.1634 28.8366 4 20 4C11.1634 4 4 11.1634 4 20C4 28.8366 11.1634 36 20 36Z" stroke="currentColor" stroke-width="2" />
+                <path d="M13 20L18 25L27 15" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h3 class="feature-title">No Obligation</h3>
+            <p class="feature-desc">These previews are simply to showcase what’s possible — no strings attached, no pressure.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 id="contact-heading" class="section-title">Get in Touch</h2>
+        <p class="contact-sub">Ready to move forward or have a question? Reach out anytime.</p>
+        <div class="contact-links">
+          <a href="mailto:ahmalwdservices@gmail.com" class="contact-item" aria-label="Email Ahmal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2" />
+              <path d="M2 7L12 14L22 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>ahmalwdservices@gmail.com</span>
+          </a>
+          <a href="https://wa.me/18768789300" class="contact-item" target="_blank" rel="noopener" aria-label="Chat on WhatsApp with Ahmal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M3 21L4.65 17.5C3.36 15.95 2.5 13.97 2.5 11.8C2.5 6.31 6.81 2 12.3 2C17.79 2 22.1 6.31 22.1 11.8C22.1 17.29 17.79 21.6 12.3 21.6C10.34 21.6 8.48 20.95 7 19.85L3 21Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+              <path d="M9 10H9.01M12 10H12.01M15 10H15.01M9 14H15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>WhatsApp</span>
+          </a>
+          <a href="https://github.com/ahmal-wq" class="contact-item" target="_blank" rel="noopener" aria-label="GitHub Profile">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 19C4 20.5 4 16.5 2 16M16 22V18.13C16.0375 16.88 15.5731 15.655 14.7 14.75C17.8 14.35 21 13.25 21 8.25C20.9992 6.855 20.4418 5.525 19.45 4.55C19.8918 3.35 19.8918 2.02 19.45 0.82C19.45 0.82 18.35 0.48 15.9 2.03C13.745 1.35 11.255 1.35 9.1 2.03C6.65 0.48 5.55 0.82 5.55 0.82C5.10824 2.02 5.10824 3.35 5.55 4.55C4.55818 5.525 4.00076 6.855 4 8.25C4 13.25 7.2 14.35 10.3 14.75C9.42688 15.655 8.96248 16.88 9 18.13V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>GitHub</span>
+          </a>
+          <a href="https://linkedin.com/in/ahmalthomas" class="contact-item" target="_blank" rel="noopener" aria-label="LinkedIn Profile">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="4" stroke="currentColor" stroke-width="2" />
+              <path d="M8 11V17M8 8V8.01M12 17V11M16 17V13.5C16 11.57 14.43 10 12.5 10V10C11.57 10 10.8 10.73 10.8 11.6V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 Ahmal Thomas. Crafted with care.</p>
+      <p class="footer-tagline">Turning first impressions into lasting relationships.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('previewForm');
+      const input = document.getElementById('codeInput');
+      const errorDiv = document.getElementById('errorMessage');
+      const submitBtn = document.getElementById('submitBtn');
+
+      // Sample mock valid codes mapping to targeted redirect destinations
+      const validCodes = {
+        'KERRY25': '/previews/kerry',
+        'DEMO2026': '/previews/demo',
+        'ALPHA': '/previews/alpha'
+      };
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Clean and normalize input data
+        const codeValue = input.value.trim().toUpperCase();
+
+        // 1. Check for blank entry
+        if (!codeValue) {
+          showError('Please enter a access preview code.');
+          return;
+        }
+
+        // 2. Validate input pattern formatting (Alphanumeric only)
+        const alphaNumericRegex = /^[A-Z0-9]+$/;
+        if (!alphaNumericRegex.test(codeValue)) {
+          showError('Codes can only contain letters and numbers.');
+          return;
+        }
+
+        // 3. Authenticate code existence
+        if (validCodes[codeValue]) {
+          clearError();
+          submitBtn.disabled = true;
+          submitBtn.innerHTML = 'Loading Preview...';
+          
+          // Simulation of client routing sequence
+          setTimeout(() => {
+            window.location.href = validCodes[codeValue];
+          }, 600);
+        } else {
+          showError('Code not recognized. Please double-check or reach out.');
+        }
+      });
+
+      // Clear layout breaking alerts during typing adjustments
+      input.addEventListener('input', () => {
+        if (errorDiv.textContent !== '') {
+          clearError();
+        }
+      });
+
+      function showError(msg) {
+        errorDiv.textContent = msg;
+        input.setAttribute('aria-invalid', 'true');
+        input.focus();
+      }
+
+      function clearError() {
+        errorDiv.textContent = '';
+        input.removeAttribute('aria-invalid');
+      }
+    });
+  </script>
+</body>
+  </html>      </div>
     </section>
 
     <!-- Why I Build These (Feature Cards) -->
