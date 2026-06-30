@@ -6,6 +6,7 @@ const previews = {
   "SSAUTO11": "Demos/ss-auto/",
   "INSKIN08": "Demos/in-skin/",
   "KEVITAAH13": "Demos/kevitaah/"
+  "TONYHC34" : "Demos/TonyHairCare/"
 };
 
 // ---------- DOM Elements ----------
