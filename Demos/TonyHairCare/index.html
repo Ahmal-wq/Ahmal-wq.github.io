@@ -1,493 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tony's Hair Care | Olympia's Trusted Barber Since the '90s</title>
-<meta name="description" content="Precision haircuts, beard grooming, and color services in Olympia, WA. Walk-ins welcome, open late 7 days a week. Book your cut with Tony & Wendy today.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tony's Hair Care | Olympia's Trusted Barber Since the '90s</title>
+  <meta name="description" content="Precision haircuts, beard grooming, and color services in Olympia, WA. Walk-ins welcome, open late 7 days a week. Book your cut with Tony & Wendy today.">
 
-<!-- Schema.org structured data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "HairSalon",
-  "name": "Tony's Hair Care",
-  "image": "",
-  "telephone": "+1-360-489-0836",
-  "priceRange": "$$",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "1540 Cooper Point Rd SW, Ste 400",
-    "addressLocality": "Olympia",
-    "addressRegion": "WA",
-    "postalCode": "98502",
-    "addressCountry": "US"
-  },
-  "openingHoursSpecification": [
-    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:30","closes":"22:00"},
-    {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:30","closes":"22:00"}
-  ]
-}
-</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "Tony's Hair Care",
+    "image": "https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900&q=80",
+    "telephone": "+1-360-489-0836",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1540 Cooper Point Rd SW, Ste 400",
+      "addressLocality": "Olympia",
+      "addressRegion": "WA",
+      "postalCode": "98502",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:30","closes":"22:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:30","closes":"22:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"09:30","closes":"22:00"}
+    ]
+  }
+  </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
-  :root{
-    --ink:#1C2333;
-    --ink-soft:#2A3245;
-    --copper:#C1672D;
-    --copper-light:#E2966A;
-    --paper:#F3EEE3;
-    --paper-white:#FAF7F0;
-    --charcoal:#26221D;
-    --line:rgba(38,34,29,0.12);
-    --max:1180px;
-  }
-  *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    font-family:'Work Sans',sans-serif;
-    color:var(--charcoal);
-    background:var(--paper-white);
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-  h1,h2,h3,h4{
-    font-family:'Fraunces',serif;
-    font-weight:600;
-    line-height:1.08;
-    color:var(--ink);
-    letter-spacing:-0.01em;
-  }
-  a{color:inherit;text-decoration:none;}
-  img{max-width:100%;display:block;}
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
-  .eyebrow{
-    font-family:'Work Sans',sans-serif;
-    font-size:0.78rem;
-    font-weight:600;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:var(--copper);
-    display:flex;align-items:center;gap:10px;
-    margin-bottom:14px;
-  }
-  .eyebrow::before{content:'';width:24px;height:2px;background:var(--copper);display:inline-block;}
-  .btn{
-    display:inline-flex;align-items:center;justify-content:center;gap:8px;
-    padding:15px 30px;
-    font-weight:600;font-size:0.95rem;
-    border-radius:3px;
-    transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
-    cursor:pointer;border:none;
-  }
-  .btn-primary{background:var(--copper);color:#fff;}
-  .btn-primary:hover{background:#a9591f;transform:translateY(-2px);box-shadow:0 10px 24px rgba(193,103,45,0.35);}
-  .btn-ghost{background:transparent;color:var(--paper-white);border:1.5px solid rgba(250,247,240,0.45);}
-  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,0.08);}
-  .btn-dark{background:var(--ink);color:#fff;}
-  .btn-dark:hover{background:var(--ink-soft);transform:translateY(-2px);}
-
-  /* Barber stripe signature motif */
-  .stripe-rule{
-    height:6px;
-    background:repeating-linear-gradient(115deg, var(--copper) 0 14px, var(--ink) 14px 28px, var(--paper) 28px 42px);
-    width:100%;
-  }
-
-  /* NAV */
-  header{
-    position:sticky;top:0;z-index:50;
-    background:rgba(28,35,51,0.96);
-    backdrop-filter:blur(6px);
-  }
-  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:var(--max);margin:0 auto;}
-  .logo{font-family:'Fraunces',serif;font-size:1.3rem;color:#fff;font-weight:600;}
-  .logo span{color:var(--copper-light);}
-  .nav-links{display:flex;gap:32px;align-items:center;}
-  .nav-links a{color:rgba(250,247,240,0.85);font-size:0.92rem;font-weight:500;transition:color .2s;}
-  .nav-links a:hover{color:var(--copper-light);}
-  .nav-cta{display:flex;align-items:center;gap:16px;}
-  .menu-toggle{display:none;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer;}
-
-  @media (max-width:880px){
-    .nav-links{
-      position:fixed;top:64px;left:0;right:0;
-      background:var(--ink);
-      flex-direction:column;align-items:flex-start;
-      padding:24px;gap:20px;
-      transform:translateY(-130%);
-      transition:transform .3s ease;
+  <style>
+    :root{
+      --ink:#1C2333;
+      --ink-soft:#2A3245;
+      --copper:#C1672D;
+      --copper-light:#E2966A;
+      --paper:#F3EEE3;
+      --paper-white:#FAF7F0;
+      --charcoal:#26221D;
+      --line:rgba(38,34,29,0.12);
+      --max:1180px;
     }
-    .nav-links.open{transform:translateY(0);}
-    .menu-toggle{display:block;}
-    .nav-cta .btn-ghost{display:none;}
-  }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{
+      font-family:'Work Sans',sans-serif;
+      color:var(--charcoal);
+      background:var(--paper-white);
+      line-height:1.6;
+      -webkit-font-smoothing:antialiased;
+    }
+    h1,h2,h3,h4{
+      font-family:'Fraunces',serif;
+      font-weight:600;
+      line-height:1.08;
+      color:var(--ink);
+      letter-spacing:-0.01em;
+    }
+    a{color:inherit;text-decoration:none;}
+    img{max-width:100%;display:block;}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
+    .eyebrow{
+      font-family:'Work Sans',sans-serif;
+      font-size:0.78rem;
+      font-weight:600;
+      letter-spacing:0.14em;
+      text-transform:uppercase;
+      color:var(--copper);
+      display:flex;align-items:center;gap:10px;
+      margin-bottom:14px;
+    }
+    .eyebrow::before{content:'';width:24px;height:2px;background:var(--copper);display:inline-block;}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:8px;
+      padding:15px 30px;
+      font-weight:600;font-size:0.95rem;
+      border-radius:3px;
+      transition:transform .2s ease, box-shadow .2s ease, background .2s ease;
+      cursor:pointer;border:none;
+    }
+    .btn-primary{background:var(--copper);color:#fff;}
+    .btn-primary:hover{background:#a9591f;transform:translateY(-2px);box-shadow:0 10px 24px rgba(193,103,45,0.35);}
+    .btn-ghost{background:transparent;color:var(--paper-white);border:1.5px solid rgba(250,247,240,0.45);}
+    .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,0.08);}
+    .btn-dark{background:var(--ink);color:#fff;}
+    .btn-dark:hover{background:var(--ink-soft);transform:translateY(-2px);}
 
-  /* HERO */
-  .hero{
-    background:var(--ink);
-    color:var(--paper-white);
-    position:relative;
-    overflow:hidden;
-    padding:90px 0 70px;
-  }
-  .hero::after{
-    content:'';
-    position:absolute;right:-12%;top:-20%;
-    width:560px;height:560px;
-    background:radial-gradient(circle, rgba(193,103,45,0.25) 0%, transparent 70%);
-    pointer-events:none;
-  }
-  .hero-grid{
-    display:grid;grid-template-columns:1.1fr 0.9fr;gap:60px;align-items:center;
-    position:relative;z-index:1;
-  }
-  .hero h1{
-    font-size:clamp(2.4rem, 5vw, 3.6rem);
-    color:#fff;
-    margin-bottom:22px;
-  }
-  .hero h1 em{font-style:italic;color:var(--copper-light);}
-  .hero p.lead{
-    font-size:1.1rem;
-    color:rgba(250,247,240,0.78);
-    max-width:48ch;
-    margin-bottom:34px;
-  }
-  .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:42px;}
-  .hero-stats{display:flex;gap:36px;flex-wrap:wrap;}
-  .hero-stat b{display:block;font-family:'Fraunces',serif;font-size:1.9rem;color:var(--copper-light);}
-  .hero-stat span{font-size:0.82rem;color:rgba(250,247,240,0.65);}
-  .hero-photo{
-    position:relative;
-    border-radius:4px;
-    overflow:hidden;
-    aspect-ratio:4/5;
-    box-shadow:0 30px 60px rgba(0,0,0,0.4);
-  }
-  .hero-photo img{width:100%;height:100%;object-fit:cover;}
-  .hero-badge{
-    position:absolute;bottom:18px;left:18px;
-    background:var(--paper-white);
-    color:var(--ink);
-    padding:14px 18px;
-    border-radius:3px;
-    font-family:'Fraunces',serif;
-    font-size:0.95rem;
-    box-shadow:0 14px 30px rgba(0,0,0,0.25);
-  }
-  .hero-badge b{display:block;font-size:1.3rem;color:var(--copper);}
+    /* Barber stripe signature motif */
+    .stripe-rule{
+      height:6px;
+      background:repeating-linear-gradient(115deg, var(--copper) 0 14px, var(--ink) 14px 28px, var(--paper) 28px 42px);
+      width:100%;
+    }
 
-  @media (max-width:880px){
-    .hero-grid{grid-template-columns:1fr;}
-    .hero-photo{max-width:380px;margin:0 auto;}
-  }
+    /* NAV */
+    header{
+      position:sticky;top:0;z-index:50;
+      background:rgba(28,35,51,0.96);
+      backdrop-filter:blur(6px);
+      border-bottom:1px solid rgba(255,255,255,0.05);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:var(--max);margin:0 auto;}
+    .logo{font-family:'Fraunces',serif;font-size:1.3rem;color:#fff;font-weight:600;}
+    .logo span{color:var(--copper-light);}
+    .nav-links{display:flex;gap:32px;align-items:center;}
+    .nav-links a{color:rgba(250,247,240,0.85);font-size:0.92rem;font-weight:500;transition:color .2s;}
+    .nav-links a:hover{color:var(--copper-light);}
+    .nav-cta{display:flex;align-items:center;gap:16px;}
+    .menu-toggle{display:none;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer;}
 
-  /* TRUST STRIP */
-  .trust{
-    background:var(--paper);
-    border-top:1px solid var(--line);
-    border-bottom:1px solid var(--line);
-    padding:26px 0;
-  }
-  .trust .wrap{
-    display:flex;flex-wrap:wrap;gap:28px;
-    justify-content:space-between;
-    align-items:center;
-    font-size:0.9rem;font-weight:600;color:var(--ink);
-  }
-  .trust-item{display:flex;align-items:center;gap:10px;}
-  .trust-item .dot{width:7px;height:7px;border-radius:50%;background:var(--copper);}
+    @media (max-width:920px){
+      .nav-links{
+        position:fixed;top:69px;left:0;right:0;
+        background:var(--ink);
+        flex-direction:column;align-items:flex-start;
+        padding:32px 24px;gap:24px;
+        transform:translateY(-150%);
+        transition:transform .3s cubic-bezier(0.4, 0, 0.2, 1);
+        border-bottom:2px solid var(--copper);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      }
+      .nav-links.open{transform:translateY(0);}
+      .menu-toggle{display:block;}
+      .nav-cta .btn-ghost{display:none;}
+    }
 
-  /* SECTION generic */
-  section{padding:96px 0;}
-  .section-head{max-width:640px;margin-bottom:56px;}
-  .section-head h2{font-size:clamp(1.9rem,3.4vw,2.6rem);}
-  .section-head p{color:#5a5448;font-size:1.05rem;margin-top:14px;}
-  .center{text-align:center;margin-left:auto;margin-right:auto;}
+    /* HERO */
+    .hero{
+      background:var(--ink);
+      color:var(--paper-white);
+      position:relative;
+      overflow:hidden;
+      padding:90px 0 70px;
+    }
+    .hero::after{
+      content:'';
+      position:absolute;right:-12%;top:-20%;
+      width:560px;height:560px;
+      background:radial-gradient(circle, rgba(193,103,45,0.25) 0%, transparent 70%);
+      pointer-events:none;
+    }
+    .hero-grid{
+      display:grid;grid-template-columns:1.1fr 0.9fr;gap:60px;align-items:center;
+      position:relative;z-index:1;
+    }
+    .hero h1{
+      font-size:clamp(2.4rem, 5vw, 3.6rem);
+      color:#fff;
+      margin-bottom:22px;
+    }
+    .hero h1 em{font-style:italic;color:var(--copper-light);}
+    .hero p.lead{
+      font-size:1.1rem;
+      color:rgba(250,247,240,0.78);
+      max-width:48ch;
+      margin-bottom:34px;
+    }
+    .hero-actions{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:42px;}
+    .hero-stats{display:flex;gap:36px;flex-wrap:wrap;}
+    .hero-stat b{display:block;font-family:'Fraunces',serif;font-size:1.9rem;color:var(--copper-light);}
+    .hero-stat span{font-size:0.82rem;color:rgba(250,247,240,0.65);}
+    .hero-photo{
+      position:relative;
+      border-radius:4px;
+      overflow:hidden;
+      aspect-ratio:4/5;
+      box-shadow:0 30px 60px rgba(0,0,0,0.4);
+    }
+    .hero-photo img{width:100%;height:100%;object-fit:cover;}
+    .hero-badge{
+      position:absolute;bottom:18px;left:18px;
+      background:var(--paper-white);
+      color:var(--ink);
+      padding:14px 18px;
+      border-radius:3px;
+      font-family:'Fraunces',serif;
+      font-size:0.95rem;
+      box-shadow:0 14px 30px rgba(0,0,0,0.25);
+    }
+    .hero-badge b{display:block;font-size:1.3rem;color:var(--copper);white-space:nowrap;}
 
-  /* SERVICES */
-  .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
-  .service-card{
-    background:var(--paper-white);
-    border:1px solid var(--line);
-    border-radius:6px;
-    padding:34px 28px;
-    transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
-  }
-  .service-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(28,35,51,0.1);border-color:var(--copper-light);}
-  .service-card h3{font-size:1.3rem;margin-bottom:10px;}
-  .service-card p{color:#5a5448;font-size:0.95rem;margin-bottom:20px;}
-  .service-meta{
-    display:flex;justify-content:space-between;align-items:center;
-    padding-top:18px;border-top:1px dashed var(--line);
-    font-size:0.9rem;
-  }
-  .service-meta .price{font-family:'Fraunces',serif;color:var(--copper);font-size:1.2rem;font-weight:600;}
-  @media (max-width:880px){.services-grid{grid-template-columns:1fr;}}
+    @media (max-width:880px){
+      .hero-grid{grid-template-columns:1fr;}
+      .hero-photo{max-width:380px;margin:0 auto;}
+    }
 
-  /* WHY US */
-  .why-section{background:var(--ink);color:var(--paper-white);}
-  .why-section .section-head p{color:rgba(250,247,240,0.7);}
-  .why-section .section-head h2{color:#fff;}
-  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;}
-  .why-card .num{font-family:'Fraunces',serif;font-size:0.95rem;color:var(--copper-light);margin-bottom:14px;}
-  .why-card h3{color:#fff;font-size:1.15rem;margin-bottom:10px;}
-  .why-card p{color:rgba(250,247,240,0.65);font-size:0.92rem;}
-  @media (max-width:880px){.why-grid{grid-template-columns:1fr 1fr;}}
-  @media (max-width:560px){.why-grid{grid-template-columns:1fr;}}
+    /* TRUST STRIP */
+    .trust{
+      background:var(--paper);
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+      padding:26px 0;
+    }
+    .trust .wrap{
+      display:flex;flex-wrap:wrap;gap:24px 28px;
+      justify-content:space-between;
+      align-items:center;
+      font-size:0.9rem;font-weight:600;color:var(--ink);
+    }
+    .trust-item{display:flex;align-items:center;gap:10px;}
+    .trust-item .dot{width:7px;height:7px;border-radius:50%;background:var(--copper);}
 
-  /* MEET TONY */
-  .meet-grid{display:grid;grid-template-columns:0.8fr 1.2fr;gap:60px;align-items:center;}
-  .meet-photo{border-radius:6px;overflow:hidden;aspect-ratio:3/4;}
-  .meet-photo img{width:100%;height:100%;object-fit:cover;}
-  .meet-quote{
-    font-family:'Fraunces',serif;
-    font-style:italic;
-    font-size:1.5rem;
-    color:var(--ink);
-    line-height:1.4;
-    margin:20px 0 24px;
-  }
-  .meet-name{font-weight:600;color:var(--copper);}
-  @media (max-width:880px){.meet-grid{grid-template-columns:1fr;}.meet-photo{max-width:320px;}}
+    /* SECTION generic */
+    section{padding:96px 0;}
+    .section-head{max-width:640px;margin-bottom:56px;}
+    .section-head h2{font-size:clamp(1.9rem,3.4vw,2.6rem);}
+    .section-head p{color:#5a5448;font-size:1.05rem;margin-top:14px;}
+    .center{text-align:center;margin-left:auto;margin-right:auto;}
 
-  /* GALLERY */
-  .gallery-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    grid-auto-rows:160px;
-    gap:14px;
-  }
-  .gallery-grid img{width:100%;height:100%;object-fit:cover;border-radius:5px;}
-  .gallery-grid .tall{grid-row:span 2;}
-  @media (max-width:880px){
-    .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px;}
-  }
+    /* SERVICES */
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;}
+    .service-card{
+      background:var(--paper-white);
+      border:1px solid var(--line);
+      border-radius:6px;
+      padding:34px 28px;
+      display:flex;
+      flex-direction:column;
+      justify-content:between;
+      transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+    }
+    .service-card:hover{transform:translateY(-6px);box-shadow:0 20px 40px rgba(28,35,51,0.1);border-color:var(--copper-light);}
+    .service-card h3{font-size:1.3rem;margin-bottom:10px;}
+    .service-card p{color:#5a5448;font-size:0.95rem;margin-bottom:20px;flex-grow:1;}
+    .service-meta{
+      display:flex;justify-content:space-between;align-items:center;
+      padding-top:18px;border-top:1px dashed var(--line);
+      font-size:0.9rem;
+    }
+    .service-meta .price{font-family:'Fraunces',serif;color:var(--copper);font-size:1.2rem;font-weight:600;}
+    @media (max-width:920px){.services-grid{grid-template-columns:1fr 1fr;}}
+    @media (max-width:600px){.services-grid{grid-template-columns:1fr;}}
 
-  /* TESTIMONIALS */
-  .testi-strip{background:var(--paper);}
-  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
-  .testi-card{
-    background:var(--paper-white);
-    border-radius:6px;
-    padding:30px;
-    border:1px solid var(--line);
-  }
-  .testi-stars{color:var(--copper);letter-spacing:2px;margin-bottom:14px;font-size:1rem;}
-  .testi-card p{font-size:0.97rem;color:var(--charcoal);margin-bottom:18px;}
-  .testi-name{font-weight:600;font-size:0.9rem;color:var(--ink);}
-  @media (max-width:880px){.testi-grid{grid-template-columns:1fr;}}
+    /* WHY US */
+    .why-section{background:var(--ink);color:var(--paper-white);}
+    .why-section .section-head p{color:rgba(250,247,240,0.7);}
+    .why-section .section-head h2{color:#fff;}
+    .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;}
+    .why-card h3{color:#fff;font-size:1.15rem;margin-bottom:10px;}
+    .why-card p{color:rgba(250,247,240,0.65);font-size:0.92rem;}
+    @media (max-width:880px){.why-grid{grid-template-columns:1fr 1fr;}}
+    @media (max-width:560px){.why-grid{grid-template-columns:1fr;}}
 
-  /* HOURS / LOCATION */
-  .hours-section{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
-  .hours-table{width:100%;border-collapse:collapse;margin-top:20px;}
-  .hours-table tr{border-bottom:1px solid var(--line);}
-  .hours-table td{padding:13px 0;font-size:0.97rem;}
-  .hours-table td:last-child{text-align:right;font-weight:600;color:var(--ink);}
-  .map-box{
-    border-radius:6px;overflow:hidden;border:1px solid var(--line);
-    aspect-ratio:4/3;
-  }
-  .map-box iframe{width:100%;height:100%;border:0;}
-  @media (max-width:880px){.hours-section{grid-template-columns:1fr;}}
+    /* MEET TONY */
+    .meet-grid{display:grid;grid-template-columns:0.8fr 1.2fr;gap:60px;align-items:center;}
+    .meet-photo{border-radius:6px;overflow:hidden;aspect-ratio:3/4;box-shadow: 0 15px 35px rgba(0,0,0,0.08);}
+    .meet-photo img{width:100%;height:100%;object-fit:cover;}
+    .meet-quote{
+      font-family:'Fraunces',serif;
+      font-style:italic;
+      font-size:1.5rem;
+      color:var(--ink);
+      line-height:1.4;
+      margin:20px 0 24px;
+    }
+    .meet-name{font-weight:600;color:var(--copper);}
+    @media (max-width:880px){.meet-grid{grid-template-columns:1fr;}.meet-photo{max-width:320px;}}
 
-  /* FAQ */
-  .faq-item{border-bottom:1px solid var(--line);}
-  .faq-q{
-    display:flex;justify-content:space-between;align-items:center;
-    padding:22px 0;cursor:pointer;
-    font-family:'Fraunces',serif;font-size:1.1rem;color:var(--ink);
-  }
-  .faq-q .icon{font-size:1.4rem;color:var(--copper);transition:transform .25s ease;}
-  .faq-item.open .icon{transform:rotate(45deg);}
-  .faq-a{max-height:0;overflow:hidden;transition:max-height .3s ease;}
-  .faq-a p{padding-bottom:20px;color:#5a5448;font-size:0.96rem;max-width:65ch;}
+    /* GALLERY */
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      grid-auto-rows:180px;
+      gap:16px;
+    }
+    .gallery-grid img{width:100%;height:100%;object-fit:cover;border-radius:5px;box-shadow: 0 4px 12px rgba(0,0,0,0.05);}
+    .gallery-grid .tall{grid-row:span 2;}
+    @media (max-width:880px){
+      .gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px;}
+    }
 
-  /* FINAL CTA */
-  .final-cta{
-    background:var(--ink);
-    color:#fff;
-    text-align:center;
-    position:relative;
-    overflow:hidden;
-  }
-  .final-cta::before{
-    content:'';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
-    width:700px;height:700px;
-    background:radial-gradient(circle, rgba(193,103,45,0.18), transparent 70%);
-  }
-  .final-cta h2{color:#fff;font-size:clamp(2rem,4vw,2.8rem);position:relative;z-index:1;margin-bottom:18px;}
-  .final-cta p{color:rgba(250,247,240,0.75);max-width:50ch;margin:0 auto 34px;position:relative;z-index:1;}
-  .final-cta .hero-actions{justify-content:center;position:relative;z-index:1;}
+    /* TESTIMONIALS */
+    .testi-strip{background:var(--paper);}
+    .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+    .testi-card{
+      background:var(--paper-white);
+      border-radius:6px;
+      padding:30px;
+      border:1px solid var(--line);
+    }
+    .testi-stars{color:var(--copper);letter-spacing:2px;margin-bottom:14px;font-size:1rem;}
+    .testi-card p{font-size:0.97rem;color:var(--charcoal);margin-bottom:18px;}
+    .testi-name{font-weight:600;font-size:0.9rem;color:var(--ink);}
+    @media (max-width:880px){.testi-grid{grid-template-columns:1fr;}}
 
-  /* FOOTER */
-  footer{background:var(--charcoal);color:rgba(250,247,240,0.7);padding:60px 0 30px;}
-  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
-  .footer-grid h4{color:#fff;font-size:0.95rem;margin-bottom:16px;font-family:'Work Sans',sans-serif;font-weight:600;}
-  .footer-grid a{display:block;color:rgba(250,247,240,0.65);font-size:0.9rem;margin-bottom:10px;}
-  .footer-grid a:hover{color:var(--copper-light);}
-  .footer-bottom{border-top:1px solid rgba(250,247,240,0.12);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:0.82rem;color:rgba(250,247,240,0.45);}
-  @media (max-width:880px){.footer-grid{grid-template-columns:1fr 1fr;}}
+    /* HOURS / LOCATION */
+    .hours-section{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;}
+    .hours-table{width:100%;border-collapse:collapse;margin-top:20px;}
+    .hours-table tr{border-bottom:1px solid var(--line);}
+    .hours-table td{padding:13px 0;font-size:0.97rem;}
+    .hours-table td:last-child{text-align:right;font-weight:600;color:var(--ink);}
+    .map-box{
+      border-radius:6px;overflow:hidden;border:1px solid var(--line);
+      aspect-ratio:4/3;box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    }
+    .map-box iframe{width:100%;height:100%;border:0;}
+    @media (max-width:880px){.hours-section{grid-template-columns:1fr;}}
 
-  @media (prefers-reduced-motion: reduce){
-    *{animation:none !important;transition:none !important;}
-  }
+    /* FAQ */
+    .faq-list{max-width:750px;margin: 0 auto;}
+    .faq-item{border-bottom:1px solid var(--line);}
+    .faq-q{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:22px 0;cursor:pointer;user-select:none;
+      font-family:'Fraunces',serif;font-size:1.1rem;color:var(--ink);
+    }
+    .faq-q .icon{font-size:1.4rem;color:var(--copper);transition:transform .25s ease;}
+    .faq-item.open .icon{transform:rotate(45deg);}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .3s cubic-bezier(0.4, 0, 0.2, 1);}
+    .faq-a p{padding-bottom:20px;color:#5a5448;font-size:0.96rem;max-width:65ch;}
 
-  .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease, transform .6s ease;}
-  .reveal.visible{opacity:1;transform:translateY(0);}
-</style>
+    /* FINAL CTA */
+    .final-cta{
+      background:var(--ink);
+      color:#fff;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+    .final-cta::before{
+      content:'';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+      width:700px;height:700px;
+      background:radial-gradient(circle, rgba(193,103,45,0.18), transparent 70%);
+    }
+    .final-cta h2{color:#fff;font-size:clamp(2rem,4vw,2.8rem);position:relative;z-index:1;margin-bottom:18px;}
+    .final-cta p{color:rgba(250,247,240,0.75);max-width:50ch;margin:0 auto 34px;position:relative;z-index:1;}
+    .final-cta .hero-actions{justify-content:center;position:relative;z-index:1;margin-bottom:0;}
+
+    /* FOOTER */
+    footer{background:var(--charcoal);color:rgba(250,247,240,0.7);padding:60px 0 30px;}
+    .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:40px;}
+    .footer-grid h4{color:#fff;font-size:0.95rem;margin-bottom:16px;font-family:'Work Sans',sans-serif;font-weight:600;}
+    .footer-grid a{display:block;color:rgba(250,247,240,0.65);font-size:0.9rem;margin-bottom:10px;}
+    .footer-grid a:hover{color:var(--copper-light);}
+    .footer-bottom{border-top:1px solid rgba(250,247,240,0.12);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:0.82rem;color:rgba(250,247,240,0.45);}
+    @media (max-width:880px){.footer-grid{grid-template-columns:1fr 1fr;}}
+    @media (max-width:480px){.footer-grid{grid-template-columns:1fr;}}
+
+    @media (prefers-reduced-motion: reduce){
+      *{animation:none !important;transition:none !important;}
+      .reveal{opacity:1 !important;transform:none !important;}
+    }
+
+    /* Scroll Reveal Animation Styling */
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .6s cubic-bezier(0.215, 0.610, 0.355, 1), transform .6s cubic-bezier(0.215, 0.610, 0.355, 1);}
+    .reveal.visible{opacity:1;transform:translateY(0);}
+  </style>
 </head>
 <body>
 
-<header>
-  <nav class="nav">
-    <a href="#" class="logo">Tony's <span>Hair Care</span></a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
-    <div class="nav-links" id="navLinks">
-      <a href="#services">Services</a>
-      <a href="#why">Why Us</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#hours">Hours &amp; Location</a>
-      <a href="#faq">FAQ</a>
-    </div>
-    <div class="nav-cta">
-      <a href="tel:+13604890836" class="btn btn-ghost">(360) 489-0836</a>
-      <a href="#book" class="btn btn-primary">Book Now</a>
-    </div>
-  </nav>
-</header>
-<div class="stripe-rule"></div>
+  <header>
+    <nav class="nav">
+      <a href="#" class="logo">Tony's <span>Hair Care</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#services">Services</a>
+        <a href="#why">Why Us</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#hours">Hours &amp; Location</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="nav-cta">
+        <a href="tel:+13604890836" class="btn btn-ghost">(360) 489-0836</a>
+        <a href="tel:+13604890836" class="btn btn-primary">Book Now</a>
+      </div>
+    </nav>
+  </header>
+  <div class="stripe-rule"></div>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="eyebrow" style="color:var(--copper-light)">Olympia, WA · Walk-ins Welcome</div>
-      <h1>A great haircut, <em>every single time</em> — no exceptions.</h1>
-      <p class="lead">For over 20 years, Tony &amp; Wendy have given Olympia honest, precision haircuts at a fair price. No upsells, no rushed appointments — just craftsmanship you can count on.</p>
-      <div class="hero-actions">
-        <a href="#book" class="btn btn-primary">Book Your Appointment</a>
-        <a href="tel:+13604890836" class="btn btn-ghost">Call (360) 489-0836</a>
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow" style="color:var(--copper-light)">Olympia, WA · Walk-ins Welcome</div>
+        <h1>A great haircut, <em>every single time</em> — no exceptions.</h1>
+        <p class="lead">For over 20 years, Tony &amp; Wendy have given Olympia honest, precision haircuts at a fair price. No upsells, no rushed appointments — just craftsmanship you can count on.</p>
+        <div class="hero-actions">
+          <a href="tel:+13604890836" class="btn btn-primary">Call to Book Appointment</a>
+          <a href="tel:+13604890836" class="btn btn-ghost">Call (360) 489-0836</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><b>20+</b><span>Years cutting hair in Olympia</span></div>
+          <div class="hero-stat"><b>4.8★</b><span>Average customer rating</span></div>
+          <div class="hero-stat"><b>9:30–10pm</b><span>Open late, every day</span></div>
+        </div>
       </div>
-      <div class="hero-stats">
-        <div class="hero-stat"><b>20+</b><span>Years cutting hair in Olympia</span></div>
-        <div class="hero-stat"><b>4.8★</b><span>Average customer rating</span></div>
-        <div class="hero-stat"><b>9:30–10pm</b><span>Open late, every day</span></div>
+      <div class="hero-photo">
+        <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900&q=80" alt="Barber giving a precision haircut at Tony's Hair Care in Olympia">
+        <div class="hero-badge">Walk-ins<b>Always Welcome</b></div>
       </div>
     </div>
-    <div class="hero-photo">
-      <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900&q=80" alt="Barber giving a precision haircut at Tony's Hair Care in Olympia">
-      <div class="hero-badge">Walk-ins<b>Always Welcome</b></div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- TRUST STRIP -->
-<div class="trust">
-  <div class="wrap">
-    <div class="trust-item"><span class="dot"></span>Open 7 days, 9:30am–10pm</div>
-    <div class="trust-item"><span class="dot"></span>Same-day & last-minute cuts</div>
-    <div class="trust-item"><span class="dot"></span>20+ years of repeat clients</div>
-    <div class="trust-item"><span class="dot"></span>Men, women & kids welcome</div>
-  </div>
-</div>
-
-<!-- SERVICES -->
-<section id="services">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow">Services</div>
-      <h2>Precision cuts, honest pricing.</h2>
-      <p>No hidden fees, no pressure to add services you didn't ask for. Just tell us what you want — we'll get it right.</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card reveal">
-        <h3>Men's Haircut</h3>
-        <p>Classic, fade, or modern styles — tailored to your face shape and how you actually wear your hair day to day.</p>
-        <div class="service-meta"><span>~30 min</span><span class="price">$20</span></div>
-      </div>
-      <div class="service-card reveal">
-        <h3>Women's Haircut</h3>
-        <p>From a simple trim to a full style change, with layers and shaping built to be easy to maintain at home.</p>
-        <div class="service-meta"><span>~45 min</span><span class="price">$30+</span></div>
-      </div>
-      <div class="service-card reveal">
-        <h3>Beard Trim &amp; Grooming</h3>
-        <p>Clean lines, sharp edges, and a shape that suits you — paired with a cut or on its own.</p>
-        <div class="service-meta"><span>~15 min</span><span class="price">$12</span></div>
-      </div>
-      <div class="service-card reveal">
-        <h3>Color, Perm &amp; Foil</h3>
-        <p>Full color, partial foils, or a perm — done with care and a clear sense of what will actually suit you.</p>
-        <div class="service-meta"><span>~60–90 min</span><span class="price">$60+</span></div>
-      </div>
-      <div class="service-card reveal">
-        <h3>Kids' Haircut</h3>
-        <p>Patient, quick, and painless — even for the squirmy ones. A go-to for Olympia families.</p>
-        <div class="service-meta"><span>~20 min</span><span class="price">$15</span></div>
-      </div>
-      <div class="service-card reveal">
-        <h3>Wedding &amp; Event Styling</h3>
-        <p>Special-occasion styling designed to hold up for photos and last through the whole event.</p>
-        <div class="service-meta"><span>By appointment</span><span class="price">$50+</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY US -->
-<section id="why" class="why-section">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <div class="eyebrow" style="color:var(--copper-light)">Why Olympia Chooses Tony's</div>
-      <h2>Twenty years of getting it right.</h2>
-      <p>There's a reason clients have been coming back for decades — and why their kids come here now too.</p>
-    </div>
-    <div class="why-grid">
-      <div class="why-card reveal">
-        <h3>Precision, every time</h3>
-        <p>A perfectionist's attention to detail on every cut, whether it's a quick trim or a full restyle.</p>
-      </div>
-      <div class="why-card reveal">
-        <h3>No appointment needed</h3>
-        <p>Walk in whenever it's convenient — we'll fit you in, even for same-day requests.</p>
-      </div>
-      <div class="why-card reveal">
-        <h3>Open late, every day</h3>
-        <p>9:30am to 10pm, seven days a week — including evenings after work and weekends.</p>
-      </div>
-      <div class="why-card reveal">
-        <h3>Cuts that hold their shape</h3>
-        <p>Styles designed to be easy to maintain at home, not just look good for one day.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MEET TONY -->
-<section id="meet">
-  <div class="wrap meet-grid">
-    <div class="meet-photo reveal">
-      <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=700&q=80" alt="Tony, owner and lead barber at Tony's Hair Care, cutting a client's hair">
-    </div>
-    <div class="reveal">
-      <div class="eyebrow">Meet Your Stylists</div>
-      <h2>Tony &amp; Wendy</h2>
-      <p class="meet-quote">"I don't rush a cut just to get to the next one. Every client leaves looking like they meant to look that way."</p>
-      <p class="meet-name">— Tony, Owner &amp; Lead Barber</p>
-      <p style="margin-top:18px;color:#5a5448;max-width:55ch;">Tony has been cutting hair in Olympia for over two decades, building a client list that includes families who've trusted him for three haircuts in a row — kid, parent, and grandparent. Wendy brings the same eye for detail to color, styling, and women's cuts, helping clients find a look that actually fits their life.</p>
-      <a href="#book" class="btn btn-dark" style="margin-top:26px;">Meet Them in Person</a>
-    </div>
-  </div>
-</section>
-
-<!-- GALLERY -->
-<section id="gallery" style="background:var(--paper);">
-  <div class="wrap">
-    <div class="section-head r
+  <div class="trust">
+    <div class="wrap">
+      <div class="trust-item"><span class="dot"></span>Open 7 days, 9:30
