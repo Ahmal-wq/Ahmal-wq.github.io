@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RG Hair by Rey | Luxury Balayage & Extensions Salon Miramar</title>
+  <meta name="description" content="Experience premium bespoke balayage, seamless hair extensions, and luxury color artistry in Miramar, FL. Schedule your private hair transformation with Rey today.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "RG Hair by Rey",
+    "image": "https://images.unsplash.com/photo-1562322140-8baeececf3df?w=900&q=80",
+    "telephone": "+1-954-555-0199",
+    "priceRange": "$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Miramar Pkwy",
+      "addressLocality": "Miramar",
+      "addressRegion": "FL",
+      "postalCode": "33027",
+      "addressCountry": "US"
+    },
+    "openingHoursSpecification": [
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:00","closes":"19:00"}
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #0A1128;
+      --navy-soft: #1C2541;
+      --gold: #C5A059;
+      --gold-light: #E5C890;
+      --cream: #F9F6F0;
+      --cream-white: #FCFBF9;
+      --charcoal: #2B2620;
+      --line: rgba(197, 160, 89, 0.15);
+      --max: 1180px;
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Work Sans', sans-serif;
+      color: var(--charcoal);
+      background: var(--cream-white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'Fraunces', serif;
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+    }
+    
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+    
+    .eyebrow {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 16px;
+    }
+    .eyebrow::after { content: ''; width: 30px; height: 1px; background: var(--gold); display: inline-block; }
+    
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 16px 32px;
+      font-weight: 500; font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: all .3s ease;
+      cursor: pointer; border: none;
+    }
+    .btn-primary { background: var(--gold); color: #fff; }
+    .btn-primary:hover { background: #b08c47; transform: translateY(-2px); box-shadow: 0 12px 24px rgba(197,160,89,0.25); }
+    .btn-ghost { background: transparent; color: var(--cream-white); border: 1px solid rgba(252,251,249,0.3); }
+    .btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,0.05); }
+    .btn-dark { background: var(--navy); color: #fff; }
+    .btn-dark:hover { background: var(--navy-soft); transform: translateY(-2px); }
+
+    /* Luxury Double Metallic Accent Rule */
+    .luxury-rule {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold) 50%, transparent);
+      width: 100%;
+      opacity: 0.6;
+    }
+
+    /* NAVIGATION */
+    header {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(10, 17, 40, 0.97);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(197, 160, 89, 0.1);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 24px; max-width: var(--max); margin: 0 auto; }
+    .logo { font-family: 'Fraunces', serif; font-size: 1.4rem; color: #fff; font-weight: 300; letter-spacing: 0.05em; }
+    .logo span { color: var(--gold-light); font-weight: 500; }
+    .nav-links { display: flex; gap: 36px; align-items: center; }
+    .nav-links a { color: rgba(252,251,249,0.8); font-size: 0.88rem; font-weight: 400; letter-spacing: 0.05em; text-transform: uppercase; transition: color .2s; }
+    .nav-links a:hover { color: var(--gold-light); }
+    .nav-cta { display: flex; align-items: center; gap: 20px; }
+    .menu-toggle { display: none; background: none; border: none; color: #fff; font-size: 1.5rem; cursor: pointer; }
+
+    @media (max-width: 960px) {
+      .nav-links {
+        position: fixed; top: 73px; left: 0; right: 0;
+        background: var(--navy);
+        flex-direction: column; align-items: center;
+        padding: 40px 24px; gap: 28px;
+        transform: translateY(-160%);
+        transition: transform .4s cubic-bezier(0.4, 0, 0.2, 1);
+        border-bottom: 2px solid var(--gold);
+      }
+      .nav-links.open { transform: translateY(0); }
+      .menu-toggle { display: block; }
+      .nav-cta .btn-ghost { display: none; }
+    }
+
+    /* HERO */
+    .hero {
+      background: var(--navy);
+      color: var(--cream-white);
+      position: relative;
+      overflow: hidden;
+      padding: 120px 0 90px;
+    }
+    .hero::after {
+      content: '';
+      position: absolute; right: -5%; top: -10%;
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(197, 160, 89, 0.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center; position: relative; z-index: 1; }
+    .hero h1 { font-size: clamp(2.6rem, 5vw, 3.8rem); color: #fff; margin-bottom: 24px; font-weight: 300; }
+    .hero h1 em { font-style: italic; font-weight: 400; color: var(--gold-light); }
+    .hero p.lead { font-size: 1.15rem; color: rgba(252,251,249,0.75); font-weight: 300; max-width: 46ch; margin-bottom: 40px; }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 48px; }
+    .hero-stats { display: flex; gap: 48px; flex-wrap: wrap; }
+    .hero-stat b { display: block; font-family: 'Fraunces', serif; font-size: 2.2rem; color: var(--gold-light); font-weight: 300; }
+    .hero-stat span { font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase; color: rgba(252,251,249,0.55); }
+    .hero-photo { position: relative; overflow: hidden; aspect-ratio: 4/5; box-shadow: 0 30px 60px rgba(0,0,0,0.5); border: 1px solid rgba(197, 160, 89, 0.2); }
+    .hero-photo img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-badge {
+      position: absolute; bottom: 24px; left: 24px;
+      background: rgba(10, 17, 40, 0.85);
+      color: #fff; backdrop-filter: blur(10px);
+      border: 1px solid var(--gold);
+      padding: 16px 24px;
+      font-family: 'Fraunces', serif; font-size: 1rem;
+    }
+    .hero-badge b { display: block; font-size: 1.4rem; color: var(--gold-light); font-weight: 400; margin-top: 2px; }
+
+    @media (max-width: 880px) {
+      .hero-grid { grid-template-columns: 1fr; }
+      .hero-photo { max-width: 400px; margin: 0 auto; }
+    }
+
+    /* GOLD STRIP */
+    .trust { background: var(--cream); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 28px 0; }
+    .trust .wrap { display: flex; flex-wrap: wrap; gap: 24px 32px; justify-content: space-between; align-items: center; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 500; color: var(--navy); }
+    .trust-item { display: flex; align-items: center; gap: 12px; }
+    .trust-item .dot { width: 5px; height: 5px; transform: rotate(45deg); background: var(--gold); }
+
+    /* SECTIONS */
+    section { padding: 110px 0; }
+    .section-head { max-width: 680px; margin-bottom: 64px; }
+    .section-head h2 { font-size: clamp(2.1rem, 3.6vw, 2.8rem); font-weight: 300; }
+    .section-head p { color: #605850; font-size: 1.05rem; font-weight: 300; margin-top: 16px; }
+    .center { text-align: center; margin-left: auto; margin-right: auto; }
+    .center .eyebrow { justify-content: center; }
+    .center .eyebrow::after { display: none; }
+
+    /* SERVICES */
+    .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .service-card {
+      background: var(--cream-white);
+      border: 1px solid var(--line);
+      padding: 40px 32px;
+      display: flex; flex-direction: column;
+      transition: all .35s ease;
+    }
+    .service-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(10,17,40,0.04); border-color: var(--gold); }
+    .service-card h3 { font-size: 1.4rem; font-weight: 400; margin-bottom: 12px; }
+    .service-card p { color: #605850; font-size: 0.92rem; font-weight: 300; margin-bottom: 28px; flex-grow: 1; }
+    .service-meta { display: flex; justify-content: space-between; align-items: center; padding-top: 20px; border-top: 1px dashed var(--line); font-size: 0.88rem; }
+    .service-meta .price { font-family: 'Fraunces', serif; color: var(--gold); font-size: 1.3rem; }
+    @media (max-width: 920px) { .services-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 600px) { .services-grid { grid-template-columns: 1fr; } }
+
+    /* WHY REY */
+    .why-section { background: var(--navy); color: var(--cream-white); }
+    .why-section .section-head p { color: rgba(252,251,249,0.65); }
+    .why-section .section-head h2 { color: #fff; }
+    .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; }
+    .why-card h3 { color: #fff; font-size: 1.25rem; font-weight: 400; margin-bottom: 12px; }
+    .why-card p { color: rgba(252,251,249,0.6); font-size: 0.9rem; font-weight: 300; }
+    @media (max-width: 880px) { .why-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 560px) { .why-grid { grid-template-columns: 1fr; } }
+
+    /* BIOGRAPHY ARTISTRY */
+    .meet-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 64px; align-items: center; }
+    .meet-photo { overflow: hidden; aspect-ratio: 3/4; box-shadow: 0 20px 45px rgba(0,0,0,0.06); border: 1px solid var(--line); }
+    .meet-photo img { width: 100%; height: 100%; object-fit: cover; }
+    .meet-quote { font-family: 'Fraunces', serif; font-style: italic; font-size: 1.6rem; color: var(--navy); line-height: 1.4; margin: 24px 0; font-weight: 300; }
+    .meet-name { font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; font-size: 0.9rem; color: var(--gold); }
+    @media (max-width: 880px) { .meet-grid { grid-template-columns: 1fr; } .meet-photo { max-width: 340px; } }
+
+    /* EDITORIAL GALLERY */
+    .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 190px; gap: 16px; }
+    .gallery-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+    .gallery-grid div { overflow: hidden; border: 1px solid var(--line); }
+    .gallery-grid div:hover img { transform: scale(1.04); }
+    .gallery-grid .tall { grid-row: span 2; }
+    @media (max-width: 880px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; } }
+
+    /* EDITORIAL REVIEW STRIP */
+    .testi-strip { background: var(--cream); }
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    .testi-card { background: var(--cream-white); padding: 40px; border: 1px solid var(--line); }
+    .testi-stars { color: var(--gold); letter-spacing: 3px; margin-bottom: 16px; font-size: 0.85rem; }
+    .testi-card p { font-size: 1rem; font-weight: 300; color: var(--charcoal); margin-bottom: 24px; font-style: italic; }
+    .testi-name { font-weight: 600; font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--navy); }
+    @media (max-width: 880px) { .testi-grid { grid-template-columns: 1fr; } }
+
+    /* ATELIER DETAILS & MAP */
+    .hours-section { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .hours-table { width: 100%; border-collapse: collapse; margin-top: 24px; }
+    .hours-table tr { border-bottom: 1px solid var(--line); }
+    .hours-table td { padding: 16px 0; font-size: 0.95rem; font-weight: 300; }
+    .hours-table tr:last-child { border-bottom: none; }
+    .hours-table td:last-child { text-align: right; font-weight: 500; color: var(--navy); }
+    .map-box { border: 1px solid var(--line); aspect-ratio: 4/3; box-shadow: 0 20px 40px rgba(10,17,40,0.03); }
+    .map-box iframe { width: 100%; height: 100%; border: 0; filter: grayscale(0.2); }
+    @media (max-width: 880px) { .hours-section { grid-template-columns: 1fr; } }
+
+    /* ACCORDION FAQS */
+    .faq-list { max-width: 800px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--line); }
+    .faq-q { display: flex; justify-content: space-between; align-items: center; padding: 24px 0; cursor: pointer; user-select: none; font-family: 'Fraunces', serif; font-size: 1.15rem; color: var(--navy); }
+    .faq-q .icon { font-size: 1.2rem; color: var(--gold); transition: transform .3s ease; font-weight: 300; }
+    .faq-item.open .icon { transform: rotate(45deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height .35s cubic-bezier(0.4, 0, 0.2, 1); }
+    .faq-a p { padding-bottom: 24px; color: #605850; font-size: 0.95rem; font-weight: 300; max-width: 70ch; }
+
+    /* CONCLUDING CTA */
+    .final-cta { background: var(--navy); color: #fff; text-align: center; position: relative; overflow: hidden; }
+    .final-cta::before { content: ''; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(197, 160, 89, 0.12), transparent 70%); }
+    .final-cta h2 { color: #fff; font-size: clamp(2.2rem, 4vw, 3rem); font-weight: 300; position: relative; z-index: 1; margin-bottom: 20px; }
+    .final-cta p { color: rgba(252,251,249,0.7); font-weight: 300; max-width: 52ch; margin: 0 auto 36px; position: relative; z-index: 1; }
+    .final-cta .hero-actions { justify-content: center; position: relative; z-index: 1; margin-bottom: 0; }
+
+    /* FOOTER ARCHITECTURE */
+    footer { background: #060A18; color: rgba(252,251,249,0.6); padding: 80px 0 40px; border-top: 1px solid rgba(197, 160, 89, 0.15); }
+    .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 48px; }
+    .footer-grid h4 { color: #fff; font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 20px; font-family: 'Work Sans', sans-serif; font-weight: 600; }
+    .footer-grid a { display: block; color: rgba(252,251,249,0.55); font-size: 0.9rem; margin-bottom: 12px; font-weight: 300; }
+    .footer-grid a:hover { color: var(--gold-light); }
+    .footer-bottom { border-top: 1px solid rgba(197, 160, 89, 0.08); padding-top: 28px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; font-size: 0.8rem; color: rgba(252,251,249,0.35); letter-spacing: 0.02em; }
+    @media (max-width: 880px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1 !important; transform: none !important; }
+    }
+
+    /* Elegant Presentation Reveals */
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s cubic-bezier(0.215, 0.610, 0.355, 1), transform .7s cubic-bezier(0.215, 0.610, 0.355, 1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="nav">
+      <a href="#" class="logo">RG HAIR <span>BY REY</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Atelier Menu">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#services">The Services</a>
+        <a href="#why">The Artistry</a>
+        <a href="#gallery">Editorial Portfolio</a>
+        <a href="#reviews">Guest Experiences</a>
+        <a href="#hours">The Atelier</a>
+        <a href="#faq">Inquiries</a>
+      </div>
+      <div class="nav-cta">
+        <a href="tel:+19545550199" class="btn btn-ghost">954.555.0199</a>
+        <a href="tel:+19545550199" class="btn btn-primary">Reserve</a>
+      </div>
+    </nav>
+  </header>
+  <div class="luxury-rule"></div>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow" style="color:var(--gold-light)">Miramar, FL · By Appointment Only</div>
+        <h1>Bespoke balayage &amp; seamless extensions <em>crafted to elevate</em>.</h1>
+        <p class="lead">Step into Miramar's premier private oasis for luxury hair color artistry. No trends, no rushed formulas—just tailored dimensional color and premium extensions designed uniquely for you.</p>
+        <div class="hero-actions">
+          <a href="tel:+19545550199" class="btn btn-primary">Request a Consultation</a>
+          <a href="tel:+19545550199" class="btn btn-ghost">Call Atelier</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat"><b>Master</b><span>Color Artistry Level</span></div>
+          <div class="hero-stat"><b>Premium</b><span>Invisible Weft Certified</span></div>
+          <div class="hero-stat"><b>1-on-1</b><span>Completely Private Setting</span></div>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=900&q=80" alt="Flawless luxury seamless blonde balayage dimensionality executed by Rey">
+        <div class="hero-badge">Miramar, FL<b>Atelier Studio</b></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust">
+    <div class="wrap">
+      <div class="trust-item"><span class="dot"></span>Custom dimensional hair color painting</div>
+      <div class="trust-item"><span class="dot"></span>Premium ethically sourced extensions</div>
+      <div class="trust-item"><span class="dot"></span>Strictly focused one-on-one appointments</div>
+      <div class="trust-item"><span class="dot"></span>Luxury conditioning hair therapies</div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">The Atelier Menu</div>
+        <h2>Signature transformations. Detailed tailoring.</h2>
+        <p>Every session includes an in-depth facial architecture alignment, customized luxury formulation, and a high-gloss premium signature blowout finish.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <h3>The Luxury Balayage</h3>
+          <p>Hand-painted multi-tonal custom dimension. Includes expert root blending, luxury toner overlay, and signature structural hair treatment mapping.</p>
+          <div class="service-meta"><span>Bespoke Session</span><span class="price">$275+</span></div>
+        </div>
+        <div class="service-card reveal">
+          <h3>Premium Hair Extensions</h3>
+          <p>Impeccable volume and customized length using premier, micro-invisible luxury method parameters. Perfectly color-matched to your dynamic canvas.</p>
+          <div class="service-meta"><span>By Consultation Only</span><span class="price">Quote</span></div>
+        </div>
+        <div class="service-card reveal">
+          <h3>Full Luxury Foilayage</h3>
+          <p>Maximum custom lift combined with organic dimensional depth using signature high-precision luxury brightness placements.</p>
+          <div class="service-meta"><span>Bespoke Session</span><span class="price">$320+</span></div>
+        </div>
+        <div class="service-card reveal">
+          <h3>Signature Color &amp; Cut</h3>
+          <p>
